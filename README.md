@@ -22,10 +22,10 @@ Our configuration file is present
  
         
  
-This this blog we will see how we can use profile to achieve goal.  We will define
-*local
-*stagging
-*production
+This this blog we will see how we can use profile to achieve goal.  We will define three profiles
+* local
+* stagging
+* production
 
 local
 =====
