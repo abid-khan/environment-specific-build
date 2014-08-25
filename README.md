@@ -1,4 +1,4 @@
-Maven Environment Specific Build
+Maven Environment specific Build
 ========================================
 In this blog I will explain how we can build warfile with environment specific configuration.
 
