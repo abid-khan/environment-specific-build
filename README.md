@@ -2,7 +2,7 @@ Maven Environment specific Build
 ========================================
 In this blog I will explain how we can build warfile with environment specific configuration.
 
-Assume we have two different environments stagging and production. Every time we want to  build war for these environment, it is expected that configuration file(here it is application.properties) for the target environment is comes with war file.
+Assume we have two different environments staging and production. Every time we want to  build war for these environment, it is expected that configuration file(here it is application.properties) for the target environment is comes with war file.
 
 Prerequisite
 ============
@@ -17,23 +17,23 @@ Our configuration file is present
         appliocation.properties
         production/
         	 appliocation.properties
-        stagging/
+        staging/
         	application.properties
  
         
  
 This this blog we will see how we can use profile to achieve goal.  We will define three profiles
 * local
-* stagging
+* staging
 * production
 
 local
 =====
 This is a default profile. This is used in eclipse
 
-stagging
+staging
 ========
-This profile is used to build war for stagging
+This profile is used to build war for staging
 
 production
 ==========
@@ -49,9 +49,9 @@ This profile is used to build war for production
 		</activation>
 	</profile>
 	<profile>
-		<id>stagging</id>
+		<id>staging</id>
 		<properties>
-			<env>stagging</env>
+			<env>staging</env>
 		</properties>
 	</profile>
 	<profile>
@@ -88,9 +88,9 @@ While building war, we will filter our configuration file in resource section  a
 ```
 
 And  we have to use profile option of maven  to build war file for different environment.
-For stagging it is
+For staging it is
 ```console
-mvn clean install -P stagging
+mvn clean install -P staging
 ```
 
 For production it is,
